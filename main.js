@@ -25,9 +25,36 @@ function setGame() {
             let ficha = document.createElement("div");
             ficha.id = r.toString() + "-" + c.toString();
             ficha.classList.add("ficha");
+            ficha.addEventListener('click', setPiece);
             document.getElementById("board").append(ficha);
         }
 //-----------------------------------------------------------se lo agrega al tablero
         board.push(row);
     }
+}
+
+//---------------------------------------------------------FUNCIONES----------------------------------
+
+function setPiece(){
+    if(gameOver){
+        return;
+    }
+
+    let coords = this.id.split('-'); //'0-0' -> ['0','0']
+    let r = parseInt(coords[0]);
+    let c = parseInt(coords[1]);
+
+    board[r][c] = currentPlayer;
+    let ficha = this;
+
+    if(currentPlayer == playerRed){
+        ficha.classList.add('ficha-roja');
+        currentPlayer = playerYellow;
+    }
+    else{
+        ficha.classList.add('ficha-amarilla');
+        currentPlayer = playerRed;
+       
+    }
+
 }
