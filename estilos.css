@@ -15,6 +15,7 @@ body {
 
 .contenedor-total{
     width: 80%;
+    max-width: 1200px;
     height: 100vh;
     margin: auto;
     padding: 15px;
