@@ -23,18 +23,13 @@ body {
     background-color: #f7f2f2;
 }
 
-.contenedor-total h1{
-    margin: 5px 0px 15px 0px;
-    letter-spacing: 3px;
+.contenedor-total h2{
+    margin: 2px 0px 15px 0px;
+    letter-spacing: 2px;
     font-family: monospace;
-    color: #0d97b3;
+    color: #04434f;
 }
 
-.contenedor-total span{
-    font-weight: bolder;
-   /* font-size: 1.2em;*/
-    color: #7070fe;
-}
 
 .tablero{
     height: 540px;
